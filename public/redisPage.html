@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    set:<br>
+    <form action="/redis/set" method="post">
+        key:<input name="key" type="text"><br>
+        value:<input name="value" type="text"><br>
+        <input type="submit" class="btn" value="set">
+    </form>
+    <br>
+    get:<br>
+    <form action="/redis/get" method="post">
+        key:<input name="getkey" type="text"><br>
+        <input type="submit" class="btn" value="get">
+    </form>
+
+</body>
+</html>

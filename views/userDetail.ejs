@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/user/update/123abc?a=b" method="post">
+        <input type="text" id="id" name="id" hidden="hidden" value=<%=user._id%> ><br>
+        id: <input type="text" disabled="disabled" value=<%=user._id%> ><br>
+        name:<input type="text" id="name" name="name" value=<%=user.name%>><br>
+        age: <input type="text" id="age"  name="age" value=<%=user.age%>><br>
+        amount: <input type="text" id="amount"  name="amount" value=<%=user.amount%>><br>
+        class:<input type="text" id="class"  name="class" value=<%=user.class%>><br>
+        birthday:<input type="text" id="birthday"  name="birthday" value=<%=user.birthday%>><br>
+        <input type="submit" value="submit">
+    </form>
+  </body>
+</html>

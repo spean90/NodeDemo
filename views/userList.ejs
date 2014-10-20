@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+        <% for(var i=0;i<users.length;i++){
+            %>
+        <li>
+            <a href="/user/detail/<%=users[i]._id%>"> <%= users[i].name %></a>
+           &nbsp;&nbsp;&nbsp; <a href="/user/delete/<%=users[i]._id%>"> <span style="color: #ff0075">x</span></a>
+        </li>
+        <%}%>
+    </ul>
+    <a href="/addUser.html"> 新增</a>&nbsp;&nbsp;&nbsp;<a href="/"> 首页</a>
+  </body>
+</html>
