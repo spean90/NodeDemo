@@ -50,9 +50,9 @@ router.get('/delete/:_id',function(req,res){
 });
 router.post('/update/:mid',function(req,res){
     var db = new mdb();
-    console.log(req.params);
-    console.log(req.body);
-    console.log(req.query);
+    console.log(req.params);  //:mid;
+    console.log(req.body);    //post表单数据；
+    console.log(req.query);   //get url?后面的参数；
     var user = req.body;
     console.log(user.id);
     db.collection("person").update({_id:new ObjectID(user.id)},user,{upsert:false, w: 1}, function (err,result) {
