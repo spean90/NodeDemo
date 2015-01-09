@@ -26,8 +26,6 @@ app.use(session({secret: 'keyboard cat'}))
 app.use(express.static(path.join(__dirname, 'public')));//如果没有找到、则在public目录下寻找
 app.use('/',function(req,res,next){
     console.log('in..intercept========拦截器 验证是否登录================');
-    console.dir(req.session);
-    console.dir(req);
     if(req.url == '/login'){
         next();
     }else{
